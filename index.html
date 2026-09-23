@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>506 Logistics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="v2.css?v=7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 26%22%3E%3Crect width=%2226%22 height=%2226%22 rx=%226%22 fill=%22%230a0e3a%22/%3E%3Cpath d=%22M5 19L11 6h4L9 19z%22 fill=%22%23f2e94e%22/%3E%3Cpath d=%22M12 19l6-13h3l-6 13z%22 fill=%22%23f2e94e%22 opacity=%22.5%22/%3E%3C/svg%3E">
+</head>
+<body>
+<!-- ============ NAV ============ -->
+<div class="nav" id="nav">
+<div class="wrap">
+<div class="nav-bar">
+<a href="#top" class="mark" aria-label="506 Logistics, inicio">
+<svg width="24" height="24" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M2 20L10.5 2H16.5L8 20H2Z" fill="currentColor"/><path d="M11.5 20L20 2H24L15.5 20H11.5Z" fill="currentColor" opacity="0.5"/></svg>
+<b>506</b><span>logistics</span>
+</a>
+<nav class="nav-links" aria-label="Principal">
+<a href="#soluciones">Soluciones</a>
+<a href="#planes">Planes corporativos</a>
+<a href="soluciones/retail-consumo.html">Retail &amp; consumo</a>
+<a href="#porque-506">Tecnología</a>
+<a href="https://rastreo.506logistics.co" target="_blank" rel="noopener">Rastrear guía</a>
+</nav>
+<div class="nav-actions">
+<a class="btn btn--signal" href="asesor.html">Evaluar mi operación</a>
+</div>
+<button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+</button>
+</div>
+<div class="nav-drawer">
+<a href="#soluciones">Soluciones</a>
+<a href="#planes">Planes corporativos</a>
+<a href="soluciones/retail-consumo.html">Retail &amp; consumo</a>
+<a href="#porque-506">Tecnología</a>
+<a href="https://rastreo.506logistics.co" target="_blank" rel="noopener">Rastrear guía</a>
+<a class="btn btn--signal" href="asesor.html">Evaluar mi operación</a>
+</div>
+</div>
+</div>
+<!-- ============ HERO ============ -->
+<section class="band band--dark hero" id="top">
+<div class="orb" aria-hidden="true"></div>
+<svg class="hero-map" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+<!-- Trama abstracta de calles: la ciudad donde se hace la última milla -->
+<g fill="none" stroke="#9aa0cc" stroke-width="1" stroke-linecap="round">
+<path d="M-20 140 C 300 120, 600 170, 900 130 S 1300 110, 1460 150"/>
+<path d="M-20 330 C 260 300, 520 360, 760 320 S 1180 290, 1460 340"/>
+<path d="M-20 520 C 320 500, 640 540, 980 505 S 1300 490, 1460 520"/>
+<path d="M-20 700 C 380 690, 700 720, 1040 690 S 1320 680, 1460 700"/>
+<path d="M120 -20 C 150 250, 90 520, 150 920"/>
+<path d="M380 -20 C 400 300, 350 600, 400 920"/>
+<path d="M1060 -20 C 1030 300, 1090 600, 1050 920"/>
+<path d="M1310 -20 C 1290 280, 1340 580, 1300 920"/>
+<path d="M-40 860 L 560 -40" opacity=".7"/>
+<path d="M880 -40 L 1480 820" opacity=".7"/>
+</g>
+<g fill="#0a0e3a" stroke="#9aa0cc" stroke-width="1.2">
+<circle cx="136" cy="132" r="2.8"/><circle cx="390" cy="318" r="2.8"/><circle cx="1062" cy="302" r="2.8"/>
+<circle cx="1318" cy="512" r="2.8"/><circle cx="144" cy="705" r="2.8"/><circle cx="1045" cy="692" r="2.8"/>
+</g>
+</svg>
+<svg class="hero-route" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+<!-- Dos rutas de reparto sobre la trama: bodega → paradas -->
+<path class="dash" d="M144 705 C 150 600, 120 420, 138 330 S 250 322, 390 318" fill="none" stroke="#f2e94e" stroke-width="1.4" stroke-linecap="round"/>
+<path class="dash" d="M1062 130 C 1070 220, 1060 290, 1062 302 S 1200 335, 1318 338 S 1330 460, 1318 512" fill="none" stroke="#f2e94e" stroke-width="1.4" stroke-linecap="round"/>
+<g fill="#f2e94e"><circle cx="144" cy="705" r="3.2"/><circle cx="138" cy="330" r="3.2"/><circle cx="1062" cy="302" r="3.2"/><circle cx="1318" cy="338" r="3.2"/></g>
+<g fill="#0a0e3a" stroke="#f2e94e" stroke-width="1.8"><circle cx="390" cy="318" r="4.5"/><circle cx="1318" cy="512" r="4.5"/></g>
+<circle cx="1318" cy="512" r="4.5" fill="none" stroke="#f2e94e" stroke-width="1"><animate attributeName="r" values="4.5;14;4.5" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0;.8" dur="3s" repeatCount="indefinite"/></circle>
+</svg>
+<div class="wrap">
+<div class="hero-copy">
+<a class="announce" href="#contacto"><span class="hl">Hagámoslo juntos</span> <i aria-hidden="true">→</i></a>
+<h1 class="d-2xl">Impulsemos tus operaciones, <span class="hl">juntos.</span></h1>
+<p class="lead">Vemos la logística de forma global: la mejor manera de hacer las cosas es hacerlas juntos. Cuéntanos tu operación y diseñamos la solución.</p>
+<div class="hero-cta">
+<a class="btn btn--signal" href="asesor.html">Diagnóstico de tu necesidad
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<a class="btn btn--ghost" href="https://rastreo.506logistics.co" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+Rastrear guía</a>
+</div>
+<div class="trust">
+<small>Marcas que operan con nosotros · integrados con tu tienda</small>
+<div class="trust-row">
+<span>Victoria's Secret</span><span>Bath &amp; Body Works</span>
+<i class="sep" aria-hidden="true"></i>
+<span class="int">VTEX</span><span class="int">Shopify</span><span class="int">WooCommerce</span>
+</div>
+</div>
+</div>
+<div class="hero-stats" aria-label="Resultados de 506">
+<div class="hero-stat"><b>&lt;1%</b><span>Tasa de averías, bajada desde 10% en clientes retail</span></div>
+<div class="hero-stat"><b>100%</b><span>Entregas a tiempo bajo nuestros SLA corporativos</span></div>
+<div class="hero-stat"><b>24/7</b><span>Trazabilidad y prueba de entrega en tiempo real</span></div>
+</div>
+</div>
+</section>
+<!-- ============ NECESIDADES ============ -->
+<section class="band band--light" id="soluciones">
+<div class="wrap">
+<form class="tracker" id="trackForm">
+<label for="guia">¿Ya tienes una guía?</label>
+<input id="guia" name="guia" type="text" placeholder="Número de guía, ej. KXRT4P" autocomplete="off">
+<button class="btn btn--ink" type="submit">Rastrear</button>
+</form>
+<div class="head">
+<span class="eyebrow">506 para empresas</span>
+<h2 class="d-xl">¿Qué necesitas <span class="serif hl-blue">resolver</span>?</h2>
+<p class="lead">Elige el punto de partida. Sumamos capacidades cuando tu operación lo pide.</p>
+</div>
+<div class="needs">
+<a class="need" href="soluciones/distribucion-nacional.html">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="14" height="10"/><path d="M15 9h4l3 3v4h-7z"/><circle cx="6" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+<h3 class="h-md">Distribuir mi mercancía</h3><p>Rutas, múltiples puntos y ventanas de entrega.</p><span class="go">Ver distribución →</span></a>
+<a class="need" href="soluciones/fulfillment-3pl.html">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg>
+<h3 class="h-md">Gestionar inventario y pedidos</h3><p>Almacenamiento, picking, packing y fulfillment.</p><span class="go">Ver fulfillment →</span></a>
+<a class="need" href="soluciones/ecommerce-tecnologia.html">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1 13H5z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+<h3 class="h-md">Conectar mi tienda online</h3><p>Integración con VTEX, Shopify y WooCommerce.</p><span class="go">Ver integraciones →</span></a>
+<a class="need" href="soluciones/retail-consumo.html">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5"/><path d="M4 9v11h16V9"/><path d="M10 20v-6h4v6"/><path d="M3 9h18"/></svg>
+<h3 class="h-md">Abastecer tiendas físicas</h3><p>Reposición recurrente a puntos de venta.</p><span class="go">Ver retail →</span></a>
+<a class="need" href="soluciones/operaciones-3pl.html">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="12" cy="18" r="2.2"/><path d="M6.8 7.4L11 16.2M17.2 7.4L13 16.2"/></svg>
+<h3 class="h-md">Operar como una extensión mía</h3><p>Personal, tecnología y responsables dedicados.</p><span class="go">Ver implant →</span></a>
+<a class="need need--dark" href="asesor.html">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+<h3 class="h-md">¿No sabes por dónde empezar?</h3><p>Responde 4 preguntas y te devolvemos una propuesta concreta.</p><span class="go">Hacer el diagnóstico →</span></a>
+</div>
+</div>
+</section>
+<!-- ============ TECNOLOGÍA ============ -->
+<section class="band band--dark" id="tecnologia">
+<div class="wrap feature">
+<div class="feature-copy">
+<span class="eyebrow" style="justify-self:start">Tecnología desarrollada en casa</span>
+<h2 class="d-xl">Un solo <span class="hl">TMS</span>, de la orden a la puerta.</h2>
+<p class="lead">Nuestro TMS conecta cada orden con la operación en tiempo real, sin depender de un tercero para saber qué está pasando.</p>
+<ul class="checks">
+<li>Órdenes sincronizadas desde VTEX, Shopify y WooCommerce</li>
+<li>Rutas asignadas por zona, volumen y ventana</li>
+<li>API abierta para flujos a medida</li>
+<li>Alertas automáticas ante cualquier novedad</li>
+</ul>
+<div><a class="btn btn--signal" href="soluciones/ecommerce-tecnologia.html">Conocer la plataforma</a></div>
+</div>
+<div class="tms" aria-hidden="true">
+<div class="mock">
+<div class="mock-top"><div class="dots"><i></i><i></i><i></i></div><span>TMS 506 · Operación del día · 23 sep</span></div>
+<div class="tms-grid">
+<div class="tms-map">
+<svg viewBox="0 0 400 330" preserveAspectRatio="xMidYMid slice">
+<g stroke="#dde0ec" stroke-width="10" fill="none" stroke-linecap="round">
+<path d="M-10 70 L420 50"/><path d="M-10 180 L420 200"/><path d="M-10 290 L420 270"/>
+<path d="M90 -10 L110 340"/><path d="M230 -10 L210 340"/><path d="M340 -10 L350 340"/>
+</g>
+<path d="M60 280 C 110 250, 100 190, 160 180 S 250 140, 230 95 S 300 60, 340 70" fill="none" stroke="#2438d6" stroke-width="4" stroke-linecap="round"/>
+<path d="M340 70 C 360 120, 330 160, 360 210" fill="none" stroke="#2438d6" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round"/>
+<g fill="#2438d6"><circle cx="60" cy="280" r="7"/><circle cx="160" cy="180" r="7"/><circle cx="230" cy="95" r="7"/></g>
+<circle cx="340" cy="70" r="9" fill="#f2e94e" stroke="#12142b" stroke-width="3"/>
+<circle cx="360" cy="210" r="7" fill="#fff" stroke="#9aa0cc" stroke-width="3"/>
+<g font-family="Plus Jakarta Sans, Arial" font-size="11" font-weight="700" fill="#12142b">
+<text x="72" y="300">Bodega</text><text x="252" y="62">Vehículo 07</text>
+</g>
+</svg>
+</div>
+<div class="tms-side">
+<div class="kpis">
+<div class="kpi"><b>312</b><span>órdenes hoy</span></div>
+<div class="kpi"><b>96%</b><span>a tiempo</span></div>
+</div>
+<div class="m-label">Órdenes recientes</div>
+<div class="route-list">
+<div class="stop ok"><em>✓</em><span>VTEX · #48213</span><span class="badge badge--done">Entregado</span></div>
+<div class="stop go"><em>→</em><span>Shopify · #10592</span><span class="badge">En camino</span></div>
+<div class="stop"><em>·</em><span>VTEX · #48227</span><span class="badge badge--blue">Recoger</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mock tms-float">
+<div class="mock-body" style="gap:10px;padding:18px 20px;">
+<div class="m-label">Novedad · alerta automática</div>
+<div class="h-sm" style="font-size:15px;">Cliente ausente en Cl 72 #10</div>
+<span class="small" style="color:var(--slate)">Reprogramado a la ventana de 2 p.m.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ SERVICIOS ============ -->
+<section class="band band--light" id="servicios">
+<div class="wrap">
+<div class="head">
+<span class="eyebrow">Servicios</span>
+<h2 class="d-xl">De la orden a la puerta, <span class="serif hl-blue">sin soltarte la mano.</span></h2>
+<p class="lead">Cada paquete que llega tarde o dañado le cuesta clientes a tu marca. Operamos todas las etapas como un solo flujo.</p>
+</div>
+<div class="services">
+<a class="svc" href="soluciones/fulfillment-3pl.html"><code>FUL·01</code><h3 class="h-md">Fulfillment integral</h3><p>Inventario, bodega, picking, packing y facturación en un flujo conectado a tu tienda.</p><span class="arrow" aria-hidden="true">→</span></a>
+<a class="svc" href="soluciones/ecommerce-tecnologia.html"><code>INT·02</code><h3 class="h-md">Integración con tu plataforma</h3><p>VTEX, Shopify y WooCommerce sincronizados, más API abierta para lo que necesites.</p><span class="arrow" aria-hidden="true">→</span></a>
+<a class="svc" href="soluciones/distribucion-nacional.html"><code>UML·03</code><h3 class="h-md">Última milla same &amp; next day</h3><p>Flota propia con cobertura nacional y despachos rápidos puerta a puerta.</p><span class="arrow" aria-hidden="true">→</span></a>
+<a class="svc" href="soluciones/retail-consumo.html"><code>CRP·04</code><h3 class="h-md">Distribución corporativa</h3><p>Abastecimiento a tiendas físicas y estrategia logística para el volumen de tu empresa.</p><span class="arrow" aria-hidden="true">→</span></a>
+<a class="svc" href="soluciones/retail-consumo.html"><code>CGS·05</code><h3 class="h-md">Carga sensible y de valor</h3><p>Protocolo especializado para mercancía frágil: velas, perfumes, electrónica.</p><span class="arrow" aria-hidden="true">→</span></a>
+<a class="svc" href="soluciones/proyectos-especiales.html"><code>PRJ·06</code><h3 class="h-md">Proyectos a la medida</h3><p>Diseño operativo para campañas, altos volúmenes y requerimientos especiales.</p><span class="arrow" aria-hidden="true">→</span></a>
+</div>
+</div>
+</section>
+<!-- ============ CÓMO OPERAMOS ============ -->
+<section class="band band--dark" id="proceso">
+<div class="wrap">
+<div class="head">
+<span class="eyebrow" style="justify-self:start">Cómo operamos</span>
+<h2 class="d-xl">Cuatro pasos, <span class="hl">un solo</span> responsable.</h2>
+<p class="lead">Nada se pierde entre sistemas que no se hablan: ves el mismo pedido de principio a fin, con los mismos estados que ve tu cliente.</p>
+</div>
+<div class="steps">
+<div class="step"><span class="n">1</span><h3 class="h-sm">Entra la orden</h3><p>Se sincroniza sola desde tu tienda, sin captura manual.</p><span class="badge badge--blue">Orden creada</span></div>
+<div class="step"><span class="n">2</span><h3 class="h-sm">Se prepara en bodega</h3><p>Picking y packing con protocolo según el tipo de producto.</p><span class="badge badge--blue">En proceso</span></div>
+<div class="step"><span class="n">3</span><h3 class="h-sm">Sale a ruta</h3><p>Piloto asignado y trazabilidad activa en cada tramo.</p><span class="badge">En camino</span></div>
+<div class="step"><span class="n">4</span><h3 class="h-sm">Se confirma la entrega</h3><p>Foto, firma y georreferencia quedan como evidencia.</p><span class="badge badge--done">Entregado</span></div>
+</div>
+</div>
+</section>
+<!-- ============ POR QUÉ 506 ============ -->
+<section class="band band--light" id="porque-506">
+<div class="wrap">
+<div class="head">
+<span class="eyebrow">Por qué 506</span>
+<h2 class="d-xl">Lo que ves en el papel, <span class="serif hl-blue">lo ves en la ruta.</span></h2>
+</div>
+<div class="reasons">
+<article class="reason">
+<div class="reason-copy">
+<h3 class="h-md">Tecnología desarrollada en casa</h3>
+<p>Nuestro TMS conecta cada orden con la operación en tiempo real, sin depender de un tercero.</p>
+<ul><li>Integración nativa con VTEX, Shopify y WooCommerce</li><li>API abierta para flujos a medida</li><li>Alertas automáticas ante cualquier novedad</li></ul>
+</div>
+<div class="reason-stamp reason-visual"><span class="eyebrow">TMS 506 · tiempo real</span>
+<div class="mock" aria-label="Ejemplo de la página de rastreo">
+<div class="mock-top"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><span>Rastreo de guía</span></div>
+<div class="mock-body">
+<div class="m-row"><div><div class="m-label">Guía de ejemplo</div><div class="m-guia">KXRT4P</div></div><span class="badge">En camino</span></div>
+<div class="stepper" role="img" aria-label="Progreso del pedido: etapa 4 de 5, en camino">
+<span class="fill"></span>
+<div class="st done"><i></i>Orden creada</div>
+<div class="st done"><i></i>En proceso</div>
+<div class="st done"><i></i>Asignado</div>
+<div class="st now"><i></i>En camino</div>
+<div class="st"><i></i>Entregado</div>
+</div>
+<div class="eta"><div><div class="m-label">Entrega estimada</div><b>Hoy, 23 de septiembre</b></div></div>
+</div>
+</div>
+<p>Tú y tu cliente ven el mismo estado del pedido, al mismo tiempo.</p></div>
+</article>
+<article class="reason">
+<div class="reason-copy">
+<h3 class="h-md">Cada entrega, verificada con evidencia</h3>
+<p>Foto del paquete, confirmación inmediata e historial completo desde la bodega hasta la puerta.</p>
+<ul><li>Evidencia fotográfica en cada orden</li><li>Confirmación en tiempo real al cierre</li><li>Menos disputas, más confianza con tu cliente</li></ul>
+</div>
+<div class="reason-stamp reason-visual"><span class="eyebrow">POD · prueba de entrega</span>
+<div class="mock" aria-label="Ejemplo de prueba de entrega">
+<div class="mock-top"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><span>Prueba de entrega</span></div>
+<div class="mock-body">
+<div class="pod-photo" aria-hidden="true"></div>
+<div class="pod-meta">
+<div><span class="m-label">Recibió</span><b class="sign">L. Rojas</b></div>
+<div><span class="m-label">Georref.</span><b>4.676, −74.048</b></div>
+</div>
+<span class="badge badge--done">Entregado 11:08</span>
+</div>
+</div>
+<p>Trazabilidad de extremo a extremo, sin zonas grises.</p></div>
+</article>
+<article class="reason">
+<div class="reason-copy">
+<h3 class="h-md">Manejo especializado para carga sensible</h3>
+<p>Velas, perfumes y productos frágiles exigen protocolo propio, no el trato de una caja cualquiera.</p>
+<ul><li>Empaque y manipulación según el producto</li><li>Rutas y tiempos ajustados a la fragilidad</li><li>Tasa de averías por debajo del 1%</li></ul>
+</div>
+<div class="reason-stamp"><span class="eyebrow">Carga</span><div class="fig">10% → &lt;1%</div><p>Reducción de averías en mercancía frágil para clientes retail.</p></div>
+</article>
+</div>
+</div>
+</section>
+<!-- ============ PLANES ============ -->
+<section class="band band--dark" id="planes">
+<div class="wrap">
+<div class="head head--center">
+<span class="eyebrow">Planes corporativos</span>
+<h2 class="d-xl">Entregas adaptadas a cómo <span class="hl">opera</span> tu empresa.</h2>
+<p class="lead">Definimos cobertura, frecuencia y capacidad según tus puntos, volúmenes y requisitos de atención.</p>
+</div>
+<div class="plans">
+<div class="plan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><h3 class="h-sm">Entregas same day</h3><p>Respuesta rápida en zonas y horarios habilitados.</p></div>
+<div class="plan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="1.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><h3 class="h-sm">Ventanas de atención</h3><p>Retiros y entregas alineados con cada punto.</p></div>
+<div class="plan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6.5v13.5L9 17l6 3 6-2.5V4L15 6.5 9 4z"/><path d="M9 4v13M15 6.5V20"/></svg><h3 class="h-sm">Múltiples puntos</h3><p>Distribución recurrente a clientes, tiendas o sucursales.</p></div>
+<div class="plan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="1.5"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M8.5 15l2 2 4.5-4.5"/></svg><h3 class="h-sm">Citas programadas</h3><p>Fecha, contacto, vehículo y protocolo confirmados.</p></div>
+</div>
+<div class="center-cta"><a class="btn btn--signal" href="asesor.html?need=deliveries">Evaluar mi distribución</a></div>
+</div>
+</section>
+<!-- ============ INDUSTRIAS ============ -->
+<section class="band band--light" id="industrias">
+<div class="wrap">
+<div class="head">
+<span class="eyebrow">Experiencia por industria</span>
+<h2 class="d-xl">Entendemos lo que mueves y <span class="serif hl-blue">lo que está en juego.</span></h2>
+</div>
+<div class="ind">
+<a href="soluciones/ecommerce-tecnologia.html"><span class="ind-name">E-commerce</span><p>Integración, fulfillment, última milla y experiencia postventa.</p><span class="badge">Experiencia destacada</span></a>
+<a href="soluciones/retail-consumo.html"><span class="ind-name">Retail &amp; consumo</span><p>Reposición, distribución a sucursales y logística inversa.</p><span class="badge">Cobertura nacional</span></a>
+<a href="soluciones/proyectos-especiales.html"><span class="ind-name">Industria</span><p>Movimientos entre sedes y distribución de productos de valor.</p><span class="badge">Manejo especializado</span></a>
+</div>
+</div>
+</section>
+<!-- ============ CONTACTO ============ -->
+<section class="band band--dark" id="contacto">
+<div class="wrap contact">
+<div>
+<h2 class="d-xl">Hagámoslo <span class="hl">juntos.</span></h2>
+<p class="lead">Cuéntanos tu operación — volumen, tipo de producto, cobertura — y te devolvemos una propuesta concreta. Un especialista responde en menos de 24 horas hábiles.</p>
+<div class="hero-cta" style="justify-content:flex-start;margin-top:32px;">
+<a class="btn btn--signal" href="asesor.html">Diagnóstico de tu necesidad</a>
+</div>
+</div>
+<div class="waybill">
+<span class="eyebrow">506 · Guía comercial</span>
+<div class="wf"><span>Teléfono</span><b>+57 324 320 0671</b></div>
+<div class="wf"><span>Teléfono</span><b>+57 318 739 4562</b></div>
+<div class="wf"><span>Correo</span><b>comercial@506-logistics.com</b></div>
+<div class="wf"><span>Horario</span><b>L–V · 8:00 a.m. – 5:00 p.m.</b></div>
+<a class="btn btn--ghost" href="https://rastreo.506logistics.co" target="_blank" rel="noopener">Consultar una guía</a>
+</div>
+</div>
+</section>
+<footer>
+<div class="wrap">
+<div class="foot">
+<div>
+<a href="#top" class="mark" style="color:#fff"><svg width="24" height="24" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M2 20L10.5 2H16.5L8 20H2Z" fill="currentColor"/><path d="M11.5 20L20 2H24L15.5 20H11.5Z" fill="currentColor" opacity="0.5"/></svg><b>506</b><span>logistics</span></a>
+<p style="margin-top:16px;max-width:280px;font-size:14px;">Fulfillment, última milla y distribución corporativa con tecnología propia en Colombia.</p>
+</div>
+<div><h5>Soluciones</h5><ul>
+<li><a href="soluciones/distribucion-nacional.html">Distribución nacional</a></li>
+<li><a href="soluciones/fulfillment-3pl.html">Fulfillment &amp; 3PL</a></li>
+<li><a href="soluciones/ecommerce-tecnologia.html">E-commerce &amp; tecnología</a></li>
+<li><a href="soluciones/retail-consumo.html">Retail &amp; consumo masivo</a></li>
+<li><a href="soluciones/operaciones-3pl.html">Operaciones 3PL / implant</a></li>
+<li><a href="soluciones/proyectos-especiales.html">Proyectos especiales</a></li>
+</ul></div>
+<div><h5>Operaciones</h5><ul>
+<li><a href="asesor.html">Evaluar mi operación</a></li>
+<li><a href="https://rastreo.506logistics.co" target="_blank" rel="noopener">Rastrear guía</a></li>
+</ul></div>
+<div><h5>Contacto</h5><ul>
+<li>+57 324 320 0671</li>
+<li>comercial@506-logistics.com</li>
+<li>Bogotá, Colombia</li>
+</ul></div>
+</div>
+<div class="foot-bottom"><span>© 2026 506 Logistics S.A.S</span><span>Tecnología y logística para empresas</span></div>
+</div>
+</footer>
+<script>
+(function(){
+var nav=document.getElementById('nav'), burger=document.getElementById('burger');
+burger.addEventListener('click',function(){
+var open=nav.classList.toggle('open');
+burger.setAttribute('aria-expanded',open?'true':'false');
+});
+nav.querySelectorAll('.nav-drawer a').forEach(function(a){
+a.addEventListener('click',function(){nav.classList.remove('open');burger.setAttribute('aria-expanded','false');});
+});
+document.getElementById('trackForm').addEventListener('submit',function(e){
+e.preventDefault();
+var g=document.getElementById('guia').value.trim();
+var url='https://rastreo.506logistics.co/'+(g?'?guia='+encodeURIComponent(g):'');
+var a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+});
+})();
+</script>
+</body>
+</html>
